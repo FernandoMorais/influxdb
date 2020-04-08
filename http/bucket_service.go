@@ -274,8 +274,8 @@ func newBucketUpdate(pb *influxdb.BucketUpdate) *bucketUpdate {
 
 type bucketResponse struct {
 	bucket
-	Links  map[string]string `json:"links"`
-	Labels []influxdb.Label  `json:"labels"`
+	Links map[string]string `json:"links"`
+	// Labels []influxdb.Label  `json:"labels"`
 }
 
 func NewBucketResponse(b *influxdb.Bucket, labels []*influxdb.Label) *bucketResponse {
@@ -290,12 +290,12 @@ func NewBucketResponse(b *influxdb.Bucket, labels []*influxdb.Label) *bucketResp
 			"write":   fmt.Sprintf("/api/v2/write?org=%s&bucket=%s", b.OrgID, b.ID),
 		},
 		bucket: *newBucket(b),
-		Labels: []influxdb.Label{},
+		// Labels: []influxdb.Label{},
 	}
 
-	for _, l := range labels {
-		res.Labels = append(res.Labels, *l)
-	}
+	// for _, l := range labels {
+	// 	res.Labels = append(res.Labels, *l)
+	// }
 
 	return res
 }
@@ -307,10 +307,10 @@ type bucketsResponse struct {
 
 func newBucketsResponse(ctx context.Context, opts influxdb.FindOptions, f influxdb.BucketFilter, bs []*influxdb.Bucket, labelService influxdb.LabelService) *bucketsResponse {
 	rs := make([]*bucketResponse, 0, len(bs))
-	for _, b := range bs {
-		labels, _ := labelService.FindResourceLabels(ctx, influxdb.LabelMappingFilter{ResourceID: b.ID, ResourceType: influxdb.BucketsResourceType})
-		rs = append(rs, NewBucketResponse(b, labels))
-	}
+	// for _, b := range bs {
+	// 	labels, _ := labelService.FindResourceLabels(ctx, influxdb.LabelMappingFilter{ResourceID: b.ID, ResourceType: influxdb.BucketsResourceType})
+	// 	rs = append(rs, NewBucketResponse(b, labels))
+	// }
 	return &bucketsResponse{
 		Links:   newPagingLinks(prefixBuckets, opts, f, len(bs)),
 		Buckets: rs,

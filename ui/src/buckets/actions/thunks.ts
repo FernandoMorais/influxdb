@@ -75,8 +75,17 @@ export const getBuckets = () => async (
 
     const demoDataBuckets = await fetchDemoDataBuckets()
 
+    const bucketsWithoutLabels = [...resp.data.buckets, ...demoDataBuckets]
+    for (let i = 0; i < bucketsWithoutLabels.length; i++) {
+      if (!isSystemBucket(bucketsWithoutLabels[i].type)) {
+        const labels = await getLabelsForBucketHelper(bucketsWithoutLabels[i].id)
+        console.log(labels)
+        bucketsWithoutLabels[0].labels = labels
+      }
+    }
+
     const buckets = normalize<Bucket, BucketEntities, string[]>(
-      [...resp.data.buckets, ...demoDataBuckets],
+      bucketsWithoutLabels,
       arrayOfBuckets
     )
 
@@ -85,6 +94,18 @@ export const getBuckets = () => async (
     console.error(error)
     dispatch(setBuckets(RemoteDataState.Error))
     dispatch(notify(getBucketsFailed()))
+  }
+}
+
+const getLabelsForBucketHelper = async (bucketID: string) => {
+  try {
+    const r = await getBucketsLabels({ bucketID: bucketID })
+    if (r.status != 200) {
+      throw new Error(r.data.message)
+    }
+    return r.data.labels
+  } catch (e) {
+    console.error(e)
   }
 }
 

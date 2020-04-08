@@ -10,7 +10,6 @@ import {bucketSchema, arrayOfBuckets} from 'src/schemas'
 
 // Types
 import {
-  AppState,
   RemoteDataState,
   GetState,
   GenBucket,
@@ -24,7 +23,7 @@ import {
 // Utils
 import {getErrorMessage} from 'src/utils/api'
 import {getOrg} from 'src/organizations/selectors'
-import {getLabels, getStatus} from 'src/resources/selectors'
+import {getStatus} from 'src/resources/selectors'
 
 // Actions
 import {
@@ -51,6 +50,8 @@ import {
   removeBucketLabelFailed,
 } from 'src/shared/copy/notifications'
 import {LIMIT} from 'src/resources/constants'
+import {getBucketsLabels} from 'src/client'
+import {isSystemBucket} from '../selectors'
 
 type Action = BucketAction | NotifyAction
 
@@ -73,19 +74,32 @@ export const getBuckets = () => async (
       throw new Error(resp.data.message)
     }
 
+    console.log(resp.data.buckets)
+
     const demoDataBuckets = await fetchDemoDataBuckets()
 
-    const bucketsWithoutLabels = [...resp.data.buckets, ...demoDataBuckets]
+    const bucketsWithoutLabels = resp.data.buckets
+    const ownBuckets: Array<
+      Omit<OwnBucket, 'readableRetention'>
+    > = bucketsWithoutLabels
+
     for (let i = 0; i < bucketsWithoutLabels.length; i++) {
       if (!isSystemBucket(bucketsWithoutLabels[i].type)) {
-        const labels = await getLabelsForBucketHelper(bucketsWithoutLabels[i].id)
+        const labels = await getLabelsForBucketHelper(
+          bucketsWithoutLabels[i].id
+        )
         console.log(labels)
-        bucketsWithoutLabels[0].labels = labels
+        let l: Array<string> = []
+
+        labels.forEach(label => {
+          l.push(label.id)
+        })
+        ownBuckets[0].labels = l
       }
     }
 
     const buckets = normalize<Bucket, BucketEntities, string[]>(
-      bucketsWithoutLabels,
+      [...ownBuckets, ...demoDataBuckets],
       arrayOfBuckets
     )
 
@@ -99,7 +113,7 @@ export const getBuckets = () => async (
 
 const getLabelsForBucketHelper = async (bucketID: string) => {
   try {
-    const r = await getBucketsLabels({ bucketID: bucketID })
+    const r = await getBucketsLabels({bucketID: bucketID})
     if (r.status != 200) {
       throw new Error(r.data.message)
     }
@@ -137,12 +151,10 @@ export const createBucket = (bucket: OwnBucket) => async (
 }
 
 export const updateBucket = (bucket: OwnBucket) => async (
-  dispatch: Dispatch<Action>,
-  getState: GetState
+  dispatch: Dispatch<Action>
 ) => {
   try {
-    const state = getState()
-    const data = denormalizeBucket(state, bucket)
+    const data = denormalizeBucket(bucket)
 
     const resp = await api.patchBucket({
       bucketID: bucket.id,
@@ -168,12 +180,10 @@ export const updateBucket = (bucket: OwnBucket) => async (
 }
 
 export const renameBucket = (originalName: string, bucket: OwnBucket) => async (
-  dispatch: Dispatch<Action>,
-  getState: GetState
+  dispatch: Dispatch<Action>
 ) => {
   try {
-    const state = getState()
-    const data = denormalizeBucket(state, bucket)
+    const data = denormalizeBucket(bucket)
 
     const resp = await api.patchBucket({
       bucketID: bucket.id,
@@ -275,10 +285,8 @@ export const deleteBucketLabel = (bucketID: string, label: Label) => async (
   }
 }
 
-const denormalizeBucket = (state: AppState, bucket: OwnBucket): GenBucket => {
-  const labels = getLabels(state, bucket.labels)
+const denormalizeBucket = (bucket: OwnBucket): GenBucket => {
   return {
     ...bucket,
-    labels,
   }
 }

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdb/influxdb/pkg/escape"
+	"github.com/FernandoMorais/influxdb/pkg/escape"
 )
 
 var (

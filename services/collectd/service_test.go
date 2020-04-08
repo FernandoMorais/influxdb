@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/toml"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/toml"
 )
 
 // Test that the service checks / creates the target database on startup.

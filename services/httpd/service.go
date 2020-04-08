@@ -10,7 +10,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/influxdb/influxdb"
+	"github.com/FernandoMorais/influxdb"
 )
 
 // statistics gathered by the httpd package.

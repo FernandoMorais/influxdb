@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/influxdb/influxdb/snapshot"
+	"github.com/FernandoMorais/influxdb/snapshot"
 )
 
 // NewSnapshotWriter returns a new snapshot.Writer that will write

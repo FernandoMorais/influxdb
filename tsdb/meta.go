@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/pkg/escape"
-	"github.com/influxdb/influxdb/tsdb/internal"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/pkg/escape"
+	"github.com/FernandoMorais/influxdb/tsdb/internal"
 
 	"github.com/gogo/protobuf/proto"
 )

@@ -11,9 +11,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/models"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/models"
 )
 
 type Handler struct {

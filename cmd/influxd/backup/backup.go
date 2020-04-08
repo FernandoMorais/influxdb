@@ -10,8 +10,8 @@ import (
 	"net"
 	"os"
 
-	"github.com/influxdb/influxdb/services/snapshotter"
-	"github.com/influxdb/influxdb/snapshot"
+	"github.com/FernandoMorais/influxdb/services/snapshotter"
+	"github.com/FernandoMorais/influxdb/snapshot"
 )
 
 // Suffix is a suffix added to the backup while it's in-process.

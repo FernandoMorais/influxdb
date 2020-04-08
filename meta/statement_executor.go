@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/models"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/models"
 )
 
 // StatementExecutor translates InfluxQL queries to meta store methods.

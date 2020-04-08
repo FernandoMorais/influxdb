@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 var sID0 = uint64(1)

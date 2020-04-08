@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/snapshot"
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/snapshot"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 // Command represents the program execution for "influxd restore".

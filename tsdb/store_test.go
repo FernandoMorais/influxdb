@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 func TestStoreOpen(t *testing.T) {

@@ -12,10 +12,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/monitor"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/monitor"
 )
 
 var ErrHintedHandoffDisabled = fmt.Errorf("hinted handoff disabled")

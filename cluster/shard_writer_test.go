@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/models"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/models"
 )
 
 // Ensure the shard writer can successful write a single request.

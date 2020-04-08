@@ -16,9 +16,9 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/influxdb/influxdb/client"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/importer/v8"
+	"github.com/FernandoMorais/influxdb/client"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/importer/v8"
 	"github.com/peterh/liner"
 )
 

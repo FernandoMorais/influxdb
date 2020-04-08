@@ -11,10 +11,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/influxdb/influxdb/services/copier"
-	"github.com/influxdb/influxdb/tcp"
-	"github.com/influxdb/influxdb/tsdb"
-	_ "github.com/influxdb/influxdb/tsdb/engine"
+	"github.com/FernandoMorais/influxdb/services/copier"
+	"github.com/FernandoMorais/influxdb/tcp"
+	"github.com/FernandoMorais/influxdb/tsdb"
+	_ "github.com/FernandoMorais/influxdb/tsdb/engine"
 )
 
 // Ensure the service can return shard data.

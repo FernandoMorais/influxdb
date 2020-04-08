@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/influxql"
 )
 
 // Ensure a value's data type can be retrieved.

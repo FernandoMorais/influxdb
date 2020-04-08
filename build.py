@@ -42,7 +42,7 @@ DEFAULT_CONFIG = "etc/config.sample.toml"
 
 # META-PACKAGE VARIABLES
 PACKAGE_LICENSE = "MIT"
-PACKAGE_URL = "https://github.com/influxdb/influxdb"
+PACKAGE_URL = "https://github.com/FernandoMorais/influxdb"
 MAINTAINER = "InfluxData"
 VENDOR = "InfluxData"
 DESCRIPTION = "A distributed time-series database."

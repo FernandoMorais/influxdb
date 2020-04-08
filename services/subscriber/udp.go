@@ -3,7 +3,7 @@ package subscriber
 import (
 	"net"
 
-	"github.com/influxdb/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/cluster"
 )
 
 // Writes points over UDP using the line protocol

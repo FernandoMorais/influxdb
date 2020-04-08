@@ -11,10 +11,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/tsdb/internal"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/tsdb/internal"
 
 	"github.com/gogo/protobuf/proto"
 )

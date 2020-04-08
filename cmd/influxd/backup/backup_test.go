@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/cmd/influxd"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/cmd/influxd"
 )
 
 // Ensure the backup can download from the server and save to disk.

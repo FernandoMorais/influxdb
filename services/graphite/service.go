@@ -11,11 +11,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/monitor"
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/monitor"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 const (

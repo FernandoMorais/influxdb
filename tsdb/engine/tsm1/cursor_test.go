@@ -8,8 +8,8 @@ import (
 	"testing/quick"
 	"time"
 
-	"github.com/influxdb/influxdb/tsdb"
-	"github.com/influxdb/influxdb/tsdb/engine/tsm1"
+	"github.com/FernandoMorais/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/tsdb/engine/tsm1"
 )
 
 func TestCombinedEngineCursor_Quick(t *testing.T) {

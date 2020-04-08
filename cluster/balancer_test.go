@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/meta"
 )
 
 func NewNodes() []meta.NodeInfo {

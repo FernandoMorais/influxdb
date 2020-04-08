@@ -57,11 +57,11 @@ echo "\$CIRCLE_BRANCH: $CIRCLE_BRANCH"
 
 # Move the checked-out source to a better location.
 exit_if_fail mv $HOME/influxdb $GOPATH/src/github.com/influxdb
-exit_if_fail cd $GOPATH/src/github.com/influxdb/influxdb
+exit_if_fail cd $GOPATH/src/github.com/FernandoMorais/influxdb
 exit_if_fail git branch --set-upstream-to=origin/$CIRCLE_BRANCH $CIRCLE_BRANCH
 
 # Install the code.
-exit_if_fail cd $GOPATH/src/github.com/influxdb/influxdb
+exit_if_fail cd $GOPATH/src/github.com/FernandoMorais/influxdb
 exit_if_fail go get -t -d -v ./...
 exit_if_fail git checkout $CIRCLE_BRANCH # 'go get' switches to master. Who knew? Switch back.
 check_go_fmt
@@ -84,10 +84,10 @@ case $CIRCLE_NODE_INDEX in
         docker build -f Dockerfile_test_ubuntu32 -t ubuntu-32-influxdb-test .
         mkdir -p ~/docker; docker save ubuntu-32-influxdb-test > ~/docker/image.tar
         exit_if_fail docker build -f Dockerfile_test_ubuntu32 -t ubuntu-32-influxdb-test .
-        docker run -v $(pwd):/root/go/src/github.com/influxdb/influxdb -e "CI=${CI}" \
+        docker run -v $(pwd):/root/go/src/github.com/FernandoMorais/influxdb -e "CI=${CI}" \
                         -v ${CIRCLE_ARTIFACTS}:/tmp/artifacts \
                         -t ubuntu-32-influxdb-test bash \
-                        -c "cd /root/go/src/github.com/influxdb/influxdb && go get -t -d -v ./... && go build -v ./... && go test ${PARALLELISM} ${TIMEOUT} -v ./... 2>&1 | tee /tmp/artifacts/test_logs_i386.txt && exit \${PIPESTATUS[0]}"
+                        -c "cd /root/go/src/github.com/FernandoMorais/influxdb && go get -t -d -v ./... && go build -v ./... && go test ${PARALLELISM} ${TIMEOUT} -v ./... 2>&1 | tee /tmp/artifacts/test_logs_i386.txt && exit \${PIPESTATUS[0]}"
         rc=$?
         ;;
     3)

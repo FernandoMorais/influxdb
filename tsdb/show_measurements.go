@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/models"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/models"
 )
 
 // ShowMeasurementsExecutor implements the Executor interface for a SHOW MEASUREMENTS statement.

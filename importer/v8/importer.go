@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdb/influxdb/client"
+	"github.com/FernandoMorais/influxdb/client"
 )
 
 const batchSize = 5000

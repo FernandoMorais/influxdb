@@ -99,7 +99,7 @@ Setup the project structure and fetch the repo like so:
 ```bash
     mkdir $HOME/gocodez
     export GOPATH=$HOME/gocodez
-    go get github.com/influxdb/influxdb
+    go get github.com/FernandoMorais/influxdb
 ```
 
 You can add the line `export GOPATH=$HOME/gocodez` to your bash/zsh file to be set for every shell instead of having to manually run it everytime.
@@ -122,7 +122,7 @@ Pre-commit checks
 
 We have a pre-commit hook to make sure code is formatted properly and vetted before you commit any changes. We strongly recommend using the pre-commit hook to guard against accidentally committing unformatted code. To use the pre-commit hook, run the following:
 ```bash
-    cd $GOPATH/src/github.com/influxdb/influxdb
+    cd $GOPATH/src/github.com/FernandoMorais/influxdb
     cp .hooks/pre-commit .git/hooks/
 ```
 In case the commit is rejected because it's not formatted you can run
@@ -175,7 +175,7 @@ package.sh -h
 To run the tests, execute the following command:
 
 ```bash
-cd $GOPATH/src/github.com/influxdb/influxdb
+cd $GOPATH/src/github.com/FernandoMorais/influxdb
 go test -v ./...
 
 # run tests that match some pattern
@@ -240,7 +240,7 @@ For rationale, check out the post [The Case Against Third Party Libraries](http:
 
 Continuous Integration testing
 -----
-InfluxDB uses CircleCI for continuous integration testing. To see how the code is built and tested, check out [this file](https://github.com/influxdb/influxdb/blob/master/circle-test.sh). It closely follows the build and test process outlined above. You can see the exact version of Go InfluxDB uses for testing by consulting that file.
+InfluxDB uses CircleCI for continuous integration testing. To see how the code is built and tested, check out [this file](https://github.com/FernandoMorais/influxdb/blob/master/circle-test.sh). It closely follows the build and test process outlined above. You can see the exact version of Go InfluxDB uses for testing by consulting that file.
 
 Useful links
 ------------

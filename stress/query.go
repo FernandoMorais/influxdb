@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/influxdb/client"
+	"github.com/FernandoMorais/influxdb/client"
 )
 
 // QueryResults holds the total number of executed queries

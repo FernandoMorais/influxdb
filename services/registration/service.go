@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/enterprise-client/v1"
-	"github.com/influxdb/influxdb/monitor"
+	// "github.com/influxdb/enterprise-client/v1"
+	"github.com/FernandoMorais/influxdb/monitor"
 )
 
 // Service represents the registration service.

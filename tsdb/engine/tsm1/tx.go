@@ -3,7 +3,7 @@ package tsm1
 import (
 	"io"
 
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 type tx struct {

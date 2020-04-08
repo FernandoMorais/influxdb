@@ -3,7 +3,7 @@ package registration
 import (
 	"time"
 
-	"github.com/influxdb/influxdb/toml"
+	"github.com/FernandoMorais/influxdb/toml"
 )
 
 const (

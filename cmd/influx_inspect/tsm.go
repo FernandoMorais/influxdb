@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/golang/snappy"
-	"github.com/influxdb/influxdb/tsdb"
-	"github.com/influxdb/influxdb/tsdb/engine/tsm1"
+	"github.com/FernandoMorais/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/tsdb/engine/tsm1"
 )
 
 type tsdmDumpOpts struct {

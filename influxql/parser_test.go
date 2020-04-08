@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/influxql"
 )
 
 // Ensure the parser can parse a multi-statement query.

@@ -10,9 +10,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gogo/protobuf/proto"
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/meta/internal"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/meta/internal"
 )
 
 // Ensure a node can be created.

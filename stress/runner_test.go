@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/client"
+	"github.com/FernandoMorais/influxdb/client"
 )
 
 func TestTimer_StartTimer(t *testing.T) {
@@ -184,7 +184,7 @@ func TestConfig_newClient(t *testing.T) {
 	c, err := cfg.NewClient()
 
 	// This err will never be nil. See the following URL:
-	// https://github.com/influxdb/influxdb/blob/master/client/influxdb.go#L119
+	// https://github.com/FernandoMorais/influxdb/blob/master/client/influxdb.go#L119
 	if err != nil {
 		t.Error(err)
 	}

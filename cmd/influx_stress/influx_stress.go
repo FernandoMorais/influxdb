@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/influxdb/influxdb/stress"
+	"github.com/FernandoMorais/influxdb/stress"
 )
 
 var (

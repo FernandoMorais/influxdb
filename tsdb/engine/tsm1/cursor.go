@@ -3,7 +3,7 @@ package tsm1
 import (
 	"math"
 
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 // combinedEngineCursor holds a cursor for the WAL and the index

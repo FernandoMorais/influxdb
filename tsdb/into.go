@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/influxdb/influxdb/influxql"
-	"github.com/influxdb/influxdb/models"
+	"github.com/FernandoMorais/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/models"
 )
 
 // convertRowToPoints will convert a query result Row into Points that can be written back in.

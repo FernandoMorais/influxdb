@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdb/influxdb/client"
+	"github.com/FernandoMorais/influxdb/client"
 )
 
 func post(url string, datatype string, data io.Reader) error {

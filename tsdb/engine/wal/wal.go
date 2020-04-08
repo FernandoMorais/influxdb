@@ -38,9 +38,9 @@ import (
 	"time"
 
 	"github.com/golang/snappy"
-	"github.com/influxdb/influxdb"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 const (

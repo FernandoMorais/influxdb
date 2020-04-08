@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/influxdb/influxdb/influxql"
+	"github.com/FernandoMorais/influxdb/influxql"
 )
 
 import "sort"

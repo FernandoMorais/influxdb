@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdb/influxdb/cluster"
-	"github.com/influxdb/influxdb/meta"
-	"github.com/influxdb/influxdb/models"
-	"github.com/influxdb/influxdb/services/graphite"
-	"github.com/influxdb/influxdb/toml"
+	"github.com/FernandoMorais/influxdb/cluster"
+	"github.com/FernandoMorais/influxdb/meta"
+	"github.com/FernandoMorais/influxdb/models"
+	"github.com/FernandoMorais/influxdb/services/graphite"
+	"github.com/FernandoMorais/influxdb/toml"
 )
 
 func Test_ServerGraphiteTCP(t *testing.T) {

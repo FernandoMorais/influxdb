@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/influxdb/influxdb/tsdb"
+	"github.com/FernandoMorais/influxdb/tsdb"
 )
 
 const (
